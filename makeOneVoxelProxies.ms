@@ -14,7 +14,7 @@ fn makeOneVoxelProxies = (
 		
 		format "Orig name: %, new name: %\n" fileName newFileName
 		local importedMesh=vrayMeshImport proxy:prxy weldVertices:1
-		vrayMeshExport nodes:importedMesh autoCreateProxies:false animation:off meshFile:newFileName oneVoxelPerMesh:true
+		vrayMeshExport nodes:importedMesh autoCreateProxies:false animation:off meshFile:newFileName oneVoxelPerMesh:true exportMultiple:false
 		
 		prxy.fileName=newFileName
 		delete importedMesh
